@@ -1,2 +1,6 @@
 const userService = require('./user');
-module.exports = { userService }
+const gradeService = require('./grade');
+const classService = require('./class');
+const subjectService = require('./subject');
+const markService = require('./mark');
+module.exports = { userService, classService, gradeService, subjectService, markService }

@@ -5,10 +5,11 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 
-
-
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const classRouter = require('./routes/class');
+const gradeRouter = require('./routes/grade');
+const subjectRouter = require('./routes/subject');
 var cors = require('cors')
 
 const app = express();
@@ -25,6 +26,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/api/user', usersRouter);
+app.use('/api/class', classRouter);
+app.use('/api/grade', gradeRouter);
+app.use('/api/subject', subjectRouter);
 app.use(express.static('data/Media'));
 app.use(express.static('client/dist'));
 
@@ -63,5 +67,6 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500);
   res.send(500);
 });
+
 
 module.exports = app;
