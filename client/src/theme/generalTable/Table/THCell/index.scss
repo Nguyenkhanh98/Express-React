@@ -1,0 +1,17 @@
+.footable-sort-indicator {
+	font-family: footable;
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	padding-left: 5px;
+	box-sizing: content-box;
+}
+.thead-sorting {
+	cursor: pointer;
+	> svg {
+		// vertical-align: top;
+	}
+}
