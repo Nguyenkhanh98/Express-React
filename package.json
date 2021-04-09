@@ -5,10 +5,10 @@
   "scripts": {
     "start": "node ./bin/www ",
     "dev": "nodemon ./bin/www open chrome",
-    "client:build": "cd client && yarn pro:build",
-    "client:install": "cd client && yarn install && yarn pro:build ",
-    "build": "yarn client:build",
-    "installAll": "yarn client:install && yarn install ",
+    "client:build": "cd client && npm run pro:build",
+    "client:install": "cd client && npm install && npm run pro:build ",
+    "build": "npm client:build",
+    "installAll": "npm run client:install && npm install ",
     "seed": "node ./data/generatorData.js"
   },
   "dependencies": {
